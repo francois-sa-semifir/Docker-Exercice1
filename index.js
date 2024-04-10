@@ -19,7 +19,7 @@ app.get('/', function(req, res){
     let dateFormatted = currentDate.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     let timeFormatted = currentDate.toLocaleTimeString('fr-FR', {hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Paris' });
     // Combinaison de la date et de l'heure
-    let dateTimeFormatted = 'Nous sommes le : ' + dateFormatted + ' - ' + 'il est : ' + timeFormatted;
+    let dateTimeFormatted = 'Nous sommes le ' + dateFormatted + ' et il est : ' + timeFormatted;
     res.end(util.format('%s - %s\n', dateTimeFormatted, 'Bravo votre conteneur Express fonctionne'));
 });
 
